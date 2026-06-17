@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Regex Engine Unit Verification Suite</title>
+    <style>
+        body { font-family: system-ui, sans-serif; background: #f8fafc; color: #1e293b; padding: 24px; }
+        .test-card { background: white; padding: 16px; margin-bottom: 12px; border-radius: 6px; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .pass { color: #059669; font-weight: bold; }
+        .fail { color: #dc2626; font-weight: bold; }
+        h1 { color: #0f172a; }
+    </style>
+</head>
+<body>
+    <h1>Application Regex Validation Tests</h1>
+    <div id="test-results-output"></div>
+
+    <script type="module">
+        import { validateField } from './scripts/validators.js';
+
+        const suites = [
+            { name: "Valid Description Validation", field: "description", value: "Valid Expense Item", expectedPass: true },
+            { name: "Description Leading Space Catch", field: "description", value: " Bad Description", expectedPass: false },
+            { name: "Description Duplicate Word Lookahead Catch", field: "description", value: "Food Food purchase", expectedPass: false },
+            { name: "Valid Integer Amount Validation", field: "amount", value: "250", expectedPass: true },
+            { name: "Valid Decimal Amount Validation", field: "amount", value: "99.95", expectedPass: true },
+            { name: "Invalid Amount Trailing String Catch", field: "amount", value: "45.223", expectedPass: false },
+            { name: "Invalid Text Amount Catch", field: "amount", value: "abc", expectedPass: false },
+            { name: "Valid ISO Date Sequence format", field: "date", value: "2026-06-15", expectedPass: true },
+            { name: "Invalid Date Layout Pattern Catch", field: "date", value: "15-06-2026", expectedPass: false },
+            { name: "Valid Alpha Category Validation", field: "category", value: "Entertainment", expectedPass: true },
+            { name: "Invalid Numeric Category Symbol Catch", field: "category", value: "Food123", expectedPass: false }
+        ];
+
+        const output = document.getElementById('test-results-output');
+        
+        suites.forEach(test => {
+            const error = validateField(test.field, test.value);
+            const passed = test.expectedPass ? (error === null) : (error !== null);
+            
+            const card = document.createElement('div');
+            card.className = 'test-card';
+            card.innerHTML = `
+                <strong>${test.name}</strong> - 
+                Testing value: <code>"${test.value}"</code> | 
+                Result: <span class="${passed ? 'pass' : 'fail'}">${passed ? 'PASSED' : 'FAILED'}</span>
+                ${error ? `<br><small style="color:#64748b">Feedback: ${error}</small>` : ''}
+            `;
+            output.appendChild(card);
+        });
+    </script>
+</body>
+</html>
