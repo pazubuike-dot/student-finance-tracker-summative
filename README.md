@@ -32,18 +32,31 @@ Student Budget Tracker — Azure Blue (#007BFF), Growth Green (#28A745), and Ale
 Features
 
 Dashboard Overview: Displays total records, total spending, top category metrics, and context-aware budget cap notifications.
+
 Top-Level Financial Overview Cards: Real-time components indicating Total Balance, Monthly Income, Total Expenses, and computed Net Savings.
+
 Budget vs. Actual Tracker: Integrated progress status monitoring containing category progress bars alongside a visual warning framework.
+
 7-Day Spending Analytics & Charts: Algorithmic breakdown of daily structural metrics rendered natively via standard lightweight client vectors.
+
 Income Tracking by Source: Structured categorization sorting through paths such as Scholarship, Student Loan, Parents / Family, Part-time Work, or Other.
+
 Savings Goals & Asset Management: Goal target projections matching timeline goals featuring dynamic local state modification mechanics.
+
 Bills & Subscriptions Tracker: Active state evaluation badges monitoring timeline windows (Overdue, Due Soon, Paid, Upcoming).
+
 Dynamic Record Mutation: Direct inline addition, execution, and row disposal triggers managed by an explicit underlying transactional data framework.
+
 Multi-Column Ledger Sorting: Instant chronological, description alpha (A–Z), or raw absolute amount re-indexing states.
+
 Regex-Based Live Search: Robust lookup matching with case-sensitivity toggles alongside micro-targeted string match highlighting via <mark> elements.
+
 Global Currency Switching Engine: Dynamic value conversions (including USD, RWF, EUR, GHS) adjusting data layouts on-the-fly using fixed exchange constants.
+
 Strict JSON Data Interchange Roundtripping: Secure system backup downloading via data-URI compilation alongside structured external configuration data verification parsing.
+
 Persistent Visual Context Storage: Native state synchronization retaining customized configuration flags (such as dark mode preferences and ledger records) across full system reloading cycles.
+
 Native Scraper Core Engine: Fully integrated decoupled DOMParser runtime module that evaluates and sanitizes raw HTML markup documents to catalog heading structures, hyperlink vectors, graphic assets, structural tables, and input interaction tags.
 
 Pattern,Description,Example Match
