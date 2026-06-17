@@ -22,9 +22,9 @@ A responsive, accessible, and modular web application for tracking personal fina
     └── main.css
 
 Live Demo 
-https://pazubuike-dot.github.io/student-finance-tracker-summative/
+[Launch Live Application](https://pazubuike-dot.github.io/student-finance-tracker-summative/)
 
-GitHub Pages URL: https://github.com/pazubuike-dot/student-finance-tracker-summative.git
+GitHub Pages URL:[https://github.com/pazubuike-dot/student-finance-tracker-summative.git](https://github.com/pazubuike-dot/student-finance-tracker-summative.git)
 
 Chosen Theme
 Student Budget Tracker — Azure Blue (#007BFF), Growth Green (#28A745), and Alert Red (#DC3545) palette. Clean layout, clear typography, and intuitive navigation designed for students managing personal expenses on any device.
@@ -59,12 +59,6 @@ Persistent Visual Context Storage: Native state synchronization retaining custom
 
 Native Scraper Core Engine: Fully integrated decoupled DOMParser runtime module that evaluates and sanitizes raw HTML markup documents to catalog heading structures, hyperlink vectors, graphic assets, structural tables, and input interaction tags.
 
-Pattern,Description,Example Match
-^Food$,Exact category match,"""Food"" only"
-Lunch|Dinner,OR — either term,"""Lunch"" or ""Dinner"""
-(?i)transport,Case-insensitive inline flag,"""Transport"" or ""transport"""
-\d{4}-\d{2}-\d{2},ISO date format,"""2025-10-17"""
-\w+@\w+\.\w+,Basic email format,"""user@example.com"""
 
 Accessibility Notes
 Semantic HTML5 Landmarks: Built with clean accessibility layouts utilizing structural regions explicitly mapped via <header>, <nav>, <main>, <section>, and <footer>.
@@ -76,10 +70,9 @@ High-Contrast Design Patterns: Complies with WCAG color compliance checks under 
 Visible Focus Indicators: Dedicated outline styling indicators (*:focus-visible) are consistently preserved to support clear keyboard interaction paths.
 
 How to Run Tests
-
  Deployed Applications Quick Links
- [Launch Main Application Workspace](https://pazubuike-dot.github.io/student-finance-tracker-summative/)
- [Execute Automated Regex Engine Test Suite](https://pazubuike-dot.github.io/student-finance-tracker-summative/tests.html)
+[Launch Main Application Workspace](https://pazubuike-dot.github.io/student-finance-tracker-summative/)
+[Execute Automated Regex Engine Test Suite](https://pazubuike-dot.github.io/student-finance-tracker-summative/tests.html)
 
 Manual Testing Execution Sequence
 
