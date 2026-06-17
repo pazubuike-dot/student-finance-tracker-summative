@@ -1,0 +1,92 @@
+[
+  {
+    "id": "rec_0001",
+    "description": "Monthly Campus Accommodation Rent",
+    "amount": 450.00,
+    "category": "Accommodation",
+    "date": "2026-06-01",
+    "createdAt": "2026-06-01T08:00:00.000Z",
+    "updatedAt": "2026-06-01T08:00:00.000Z"
+  },
+  {
+    "id": "rec_0002",
+    "description": "Data Structures Textbooks",
+    "amount": 89.99,
+    "category": "Books",
+    "date": "2026-06-02",
+    "createdAt": "2026-06-02T10:30:00.000Z",
+    "updatedAt": "2026-06-02T10:30:00.000Z"
+  },
+  {
+    "id": "rec_0003",
+    "description": "Monthly Transit Bus Pass",
+    "amount": 45.00,
+    "category": "Transport",
+    "date": "2026-06-03",
+    "createdAt": "2026-06-03T14:15:00.000Z",
+    "updatedAt": "2026-06-03T14:15:00.000Z"
+  },
+  {
+    "id": "rec_0004",
+    "description": "Coffee with friends at cafeteria",
+    "amount": 8.75,
+    "category": "Entertainment",
+    "date": "2026-06-04",
+    "createdAt": "2026-06-04T16:00:00.000Z",
+    "updatedAt": "2026-06-04T16:00:00.000Z"
+  },
+  {
+    "id": "rec_0005",
+    "description": "Weekly Grocery Restock haul",
+    "amount": 124.32,
+    "category": "Food",
+    "date": "2026-06-05",
+    "createdAt": "2026-06-05T11:00:00.000Z",
+    "updatedAt": "2026-06-05T11:00:00.000Z"
+  },
+  {
+    "id": "rec_0006",
+    "description": "Lab Safety Goggles and gear",
+    "amount": 15.50,
+    "category": "Other",
+    "date": "2026-06-06",
+    "createdAt": "2026-06-06T09:20:00.000Z",
+    "updatedAt": "2026-06-06T09:20:00.000Z"
+  },
+  {
+    "id": "rec_0007",
+    "description": "Campus Tech Print Quota refill",
+    "amount": 10.00,
+    "category": "Fees",
+    "date": "2026-06-07",
+    "createdAt": "2026-06-07T13:45:00.000Z",
+    "updatedAt": "2026-06-07T13:45:00.000Z"
+  },
+  {
+    "id": "rec_0008",
+    "description": "Laptop Repair services fee",
+    "amount": 210.00,
+    "category": "Other",
+    "date": "2026-06-08",
+    "createdAt": "2026-06-08T15:30:00.000Z",
+    "updatedAt": "2026-06-08T15:30:00.000Z"
+  },
+  {
+    "id": "rec_0009",
+    "description": "Pizza delivery late night study",
+    "amount": 22.40,
+    "category": "Food",
+    "date": "2026-06-09",
+    "createdAt": "2026-06-09T22:10:00.000Z",
+    "updatedAt": "2026-06-09T22:10:00.000Z"
+  },
+  {
+    "id": "rec_0010",
+    "description": "Student Gym Membership renewal",
+    "amount": 35.00,
+    "category": "Entertainment",
+    "date": "2026-06-10",
+    "createdAt": "2026-06-10T10:00:00.000Z",
+    "updatedAt": "2026-06-10T10:00:00.000Z"
+  }
+]
