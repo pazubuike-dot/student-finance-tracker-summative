@@ -22,52 +22,39 @@ body {
     background-color: var(--color-bg-light);
     color: var(--color-text-dark);
     line-height: 1.6;
-    padding: 16px;
-}
-
-*:focus-visible {
-    outline: 3px dashed var(--color-system-warning);
-    outline-offset: 4px;
+    padding: 24px;
 }
 
 .main-header {
-    background-color: #007bff;
-    padding: 24px;
+    background-color: #0f172a; /* Exact original navy blue color */
+    padding: 32px 24px;
     border-radius: 8px;
     margin-bottom: 24px;
 }
 
 .logo {
-    color: white;
-    font-size: 28px;
-    font-weight: 800;
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: bold;
     margin-bottom: 16px;
-    max-width: 200px;
 }
 
 .nav-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
-    align-items: center;
+    gap: 16px;
 }
 
 .nav-link {
-    color: white;
+    color: #cbd5e1;
     text-decoration: none;
-    font-weight: 600;
-    padding: 8px 16px;
-    border-radius: 4px;
-    transition: background-color 0.2s;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.2s;
 }
 
 .nav-link:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.nav-link.active {
-    background-color: white;
-    color: #007bff;
+    color: #ffffff;
 }
 
 .content-section {
@@ -76,33 +63,38 @@ body {
     border-radius: 8px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     margin-bottom: 24px;
+    border: 1px solid #e2e8f0;
 }
 
 .content-section h2 {
     font-size: 20px;
+    color: #0f172a;
     margin-bottom: 20px;
 }
 
 .analytics-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 16px;
     margin-bottom: 20px;
 }
 
 .analytics-card {
     background: #f8fafc;
-    padding: 16px;
+    padding: 24px 16px;
     border-radius: 6px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 500;
+    border: 1px solid #f1f5f9;
 }
 
-.warning-banner {
-    background-color: var(--color-system-warning);
+.alert-danger {
+    background-color: var(--color-system-error);
     color: white;
     padding: 12px 16px;
     border-radius: 6px;
-    font-weight: 600;
+    font-weight: 500;
+    font-size: 15px;
 }
 
 .filter-container {
@@ -112,15 +104,17 @@ body {
 .filter-container label {
     display: block;
     margin-bottom: 8px;
-    font-weight: 600;
+    font-weight: 500;
+    color: #334155;
 }
 
 .filter-container input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #cbd5e1;
     border-radius: 6px;
     font-size: 16px;
+    color: #334155;
 }
 
 .table-responsive {
@@ -134,11 +128,22 @@ body {
 }
 
 .ledger-table th, .ledger-table td {
-    padding: 12px;
+    padding: 16px 12px;
     border-bottom: 1px solid #e2e8f0;
 }
 
 .ledger-table th {
     background-color: #f8fafc;
+    color: #475569;
     font-weight: 600;
+}
+
+.btn-remove {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
 }
