@@ -104,7 +104,8 @@ Confirm layout components dynamically update target percentages correctly.
 
  7. Scraper System Operations
  Input targeted evaluation pages into your parsing layout text panel console.
- Trigger parsing sequences and observe data models outline extracted tags accurately.
+ Trigger parsing sequences and observe data models outline e<img width="1584" height="396" alt="Precious Amarachi Azubuike linkedin " src="https://github.com/user-attachments/assets/be7178cd-11d5-458c-9aee-fbaa51dedfc6" />
+xtracted tags accurately.
 
 seed.json Requirements
 
