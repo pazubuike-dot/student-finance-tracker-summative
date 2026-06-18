@@ -284,3 +284,50 @@ mark {
         grid-column: span 2;
     }
 }
+.main-header {
+    background-color: #007BFF;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.nav-link.active {
+    background-color: #ffffff;
+    color: #007BFF;
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    padding: 1.5rem;
+}
+
+.metric-card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    border-top: 4px solid transparent;
+}
+
+.card-balance { border-top-color: #007BFF; }
+.card-income { border-top-color: #28A745; }
+.card-expenses { border-top-color: #B91C1C; }
+.card-savings { border-top-color: #6f42c1; }
