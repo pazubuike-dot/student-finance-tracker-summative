@@ -9,68 +9,69 @@
 <body>
 
     <header class="main-header">
-    <div class="logo">Student Finance Tracker</div>
-    <nav class="nav-container">
-        <a href="#about" class="nav-link">About</a>
-        <a href="#dashboard" class="nav-link active">Dashboard</a>
-        <a href="#records" class="nav-link">Records</a>
-        <a href="#income" class="nav-link">Income</a>
-        <a href="#savings" class="nav-link">Savings Goals</a>
-        <a href="#bills" class="nav-link">Bills</a>
-        <a href="#add-record" class="nav-link">Add Record</a>
-        <a href="#scraper" class="nav-link">Scraper</a>
-        <a href="#settings" class="nav-link">Settings</a>
-    </nav>
-</header>
+        <div class="logo">Student Finance Tracker</div>
+        <nav class="nav-container">
+            <a href="#about" class="nav-link">About</a>
+            <a href="#dashboard" class="nav-link active">Dashboard</a>
+            <a href="#records" class="nav-link">Records</a>
+            <a href="#income" class="nav-link">Income</a>
+            <a href="#savings" class="nav-link">Savings Goals</a>
+            <a href="#bills" class="nav-link">Bills</a>
+            <a href="#add-record" class="nav-link">Add Record</a>
+            <a href="#scraper" class="nav-link">Scraper</a>
+            <a href="#settings" class="nav-link">Settings</a>
+        </nav>
+    </header>
 
-    <main class="dashboard-wrapper">
-        <section class="dashboard-header">
-            <h2>Dashboard</h2>
-            <p>Your financial snapshot at a glance.</p>
-        </section>
+    <div class="app-container">
+        <main class="main-content">
+            <section id="dashboard-analytics" class="content-section">
+                <h2>Real-time Overview Analytics</h2>
+                <div class="analytics-grid">
+                    <div class="analytics-card">
+                        <p>Total Logged Entries: <span id="total-entries">0</span></p>
+                    </div>
+                    <div class="analytics-card">
+                        <p>Cumulative Balance: $<span id="cumulative-balance">0.00</span></p>
+                    </div>
+                    <div class="analytics-card">
+                        <p>Primary Spending Category: <span id="primary-category">Other</span></p>
+                    </div>
+                </div>
+                <div id="warning-banner" class="warning-banner">
+                    Warning: Approaching spending cap ceiling. Remaining balance: $<span id="remaining-budget">0.00</span>
+                </div>
+            </section>
 
-        <div class="dashboard-grid">
-            <div class="metric-card card-balance">
-                <h3>TOTAL BALANCE</h3>
-                <div class="value">$0.00</div>
-            </div>
-            <div class="metric-card card-income">
-                <h3>MONTHLY INCOME</h3>
-                <div class="value">$0.00</div>
-            </div>
-            <div class="metric-card card-expenses">
-                <h3>TOTAL EXPENSES</h3>
-                <div class="value">$0.00</div>
-            </div>
-            <div class="metric-card card-savings">
-                <h3>NET SAVINGS</h3>
-                <div class="value">$0.00</div>
-            </div>
-        </div>
+            <section id="financial-ledger" class="content-section">
+                <h2>Financial Ledger Records</h2>
+                <div class="filter-container">
+                    <label for="regex-filter">Live Filter Regex Query Pattern:</label>
+                    <input type="text" id="regex-filter" placeholder="e.g., \bFood\b or coffee|pizza">
+                </div>
+                <div class="table-responsive">
+                    <table class="ledger-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Description</th>
+                                <th>Amount ($)</th>
+                                <th>Category Reference</th>
+                                <th>Modification Operations</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ledger-body">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
 
-        <div class="alert-banner">
-            On track: 200.00 $ remaining of 200.00 $.
-        </div>
-
-        <div class="secondary-grid">
-            <div class="mini-card">
-                <h4>TOTAL SPENT</h4>
-                <div class="sub-value">0.00 $</div>
-            </div>
-            <div class="mini-card">
-                <h4>TOTAL RECORDS</h4>
-                <div class="sub-value">0 records</div>
-            </div>
-            <div class="mini-card">
-                <h4>TOP CATEGORY</h4>
-                <div class="sub-value">—</div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="site-footer">
-        © 2026 Pazubuike | Frontend Web Dev Summative — C3
-    </footer>
-
+    <script src="scripts/storage.js"></script>
+    <script src="scripts/validators.js"></script>
+    <script src="scripts/state.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/search.js"></script>
 </body>
 </html>
