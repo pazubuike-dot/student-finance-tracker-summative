@@ -3,75 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Finance Tracker</title>
+    <title>Accessible Student Finance Tracker</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <a href="#main-layout-content" class="skip-to-content">Skip to main contents</a>
 
-    <header class="main-header">
-        <div class="logo">Student Finance Tracker</div>
-        <nav class="nav-container">
-            <a href="#about" class="nav-link">About</a>
-            <a href="#dashboard" class="nav-link active">Dashboard</a>
-            <a href="#records" class="nav-link">Records</a>
-            <a href="#income" class="nav-link">Income</a>
-            <a href="#savings" class="nav-link">Savings Goals</a>
-            <a href="#bills" class="nav-link">Bills</a>
-            <a href="#add-record" class="nav-link">Add Record</a>
-            <a href="#scraper" class="nav-link">Scraper</a>
-            <a href="#settings" class="nav-link">Settings</a>
+    <header>
+        <h1>Student Finance Management Dashboard</h1>
+        <nav aria-label="Primary Platform Navigation">
+            <ul>
+                <li><a href="#dashboard-analytics">Analytics</a></li>
+                <li><a href="#ledger-records">Ledger</a></li>
+                <li><a href="#transaction-form-section">Log Entry</a></li>
+                <li><a href="#configuration-panel">Configuration</a></li>
+            </ul>
         </nav>
     </header>
 
-    <div class="app-container">
-        <main class="main-content">
-            <section id="dashboard-analytics" class="content-section">
-                <h2>Real-time Overview Analytics</h2>
-                <div class="analytics-grid">
-                    <div class="analytics-card">
-                        <p>Total Logged Entries: <span id="total-entries">0</span></p>
-                    </div>
-                    <div class="analytics-card">
-                        <p>Cumulative Balance: $<span id="cumulative-balance">0.00</span></p>
-                    </div>
-                    <div class="analytics-card">
-                        <p>Primary Spending Category: <span id="primary-category">Other</span></p>
-                    </div>
-                </div>
-                <div id="warning-banner" class="warning-banner">
-                    Warning: Approaching spending cap ceiling. Remaining balance: $<span id="remaining-budget">0.00</span>
-                </div>
-            </section>
+    <main id="main-layout-content">
+        <section id="dashboard-analytics" aria-labelledby="analytics-heading">
+            <h2 id="analytics-heading">Real-time Overview Analytics</h2>
+            <div class="metrics-grid">
+                <div class="card">Total Logged Entries: <span id="metric-total-count">0</span></div>
+                <div class="card">Cumulative Balance: $<span id="metric-total-sum">0.00</span></div>
+                <div class="card">Primary Spending Category: <span id="metric-top-tag">N/A</span></div>
+            </div>
+            <div id="budgetary-live-alert" class="alert-status-box" aria-live="polite" role="status"></div>
+        </section>
 
-            <section id="financial-ledger" class="content-section">
-                <h2>Financial Ledger Records</h2>
-                <div class="filter-container">
-                    <label for="regex-filter">Live Filter Regex Query Pattern:</label>
-                    <input type="text" id="regex-filter" placeholder="e.g., \bFood\b or coffee|pizza">
-                </div>
-                <div class="table-responsive">
-                    <table class="ledger-table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Description</th>
-                                <th>Amount ($)</th>
-                                <th>Category Reference</th>
-                                <th>Modification Operations</th>
-                            </tr>
-                        </thead>
-                        <tbody id="ledger-body">
-                            </tbody>
-                    </table>
-                </div>
-            </section>
-        </main>
-    </div>
+        <section id="ledger-records" aria-labelledby="ledger-heading">
+            <h2 id="ledger-heading">Financial Ledger Records</h2>
+            <div class="search-panel-wrapper">
+                <label for="search-regex-field">Live Filter Regex Query Pattern:</label>
+                <input type="text" id="search-regex-field" placeholder="e.g., \bFood\b or coffee|pizza">
+            </div>
+            
+            <div class="table-responsive-container">
+                <table id="data-ledger-table">
+                    <thead>
+                        <tr>
+                            <th><button id="trigger-sort-date" aria-label="Sort ledger table records by transaction date">Date</button></th>
+                            <th><button id="trigger-sort-desc" aria-label="Sort ledger table records by input description string">Description</button></th>
+                            <th><button id="trigger-sort-amount" aria-label="Sort ledger table records by numerical dollar amount">Amount ($)</button></th>
+                            <th>Category Reference</th>
+                            <th>Modification Operations</th>
+                        </tr>
+                    </thead>
+                    <tbody id="ledger-table-rows">
+                        </tbody>
+                </table>
+            </div>
+        </section>
 
-    <script src="scripts/storage.js"></script>
-    <script src="scripts/validators.js"></script>
-    <script src="scripts/state.js"></script>
-    <script src="scripts/ui.js"></script>
-    <script src="scripts/search.js"></script>
+        <section id="transaction-form-section" aria-labelledby="form-heading">
+            <h2 id="form-heading">Record New Transaction Entry</h2>
+            <form id="financial-input-form" novalidate>
+                <div class="form-control-block">
+                    <label for="field-description">Entry Description Title:</label>
+                    <input type="text" id="field-description" name="description" required>
+                    <span class="inline-error-feedback" id="err-feedback-description" aria-live="assertive"></span>
+                </div>
+                <div class="form-control-block">
+                    <label for="field-amount">Numerical Amount value ($):</label>
+                    <input type="text" id="field-amount" name="amount" required>
+                    <span class="inline-error-feedback" id="err-feedback-amount" aria-live="assertive"></span>
+                </div>
+                <div class="form-control-block">
+                    <label for="field-date">Execution Date:</label>
+                    <input type="date" id="field-date" name="date" required>
+                    <span class="inline-error-feedback" id="err-feedback-date" aria-live="assertive"></span>
+                </div>
+                <div class="form-control-block">
+                    <label for="field-category">Tracking Category Tag:</label>
+                    <input type="text" id="field-category" name="category" list="default-categories" required>
+                    <datalist id="default-categories">
+                        <option value="Food">
+                        <option value="Books">
+                        <option value="Transport">
+                        <option value="Entertainment">
+                        <option value="Fees">
+                        <option value="Other">
+                    </datalist>
+                    <span class="inline-error-feedback" id="err-feedback-category" aria-live="assertive"></span>
+                </div>
+                <button type="submit" id="form-submit-action">Persist Entry Transaction</button>
+            </form>
+        </section>
+
+        <section id="configuration-panel" aria-labelledby="config-heading">
+            <h2 id="config-heading">Platform System Configuration Settings</h2>
+            <div class="settings-control-wrapper">
+                <label for="field-budget-threshold">Threshold Ceiling Limit Target ($):</label>
+                <input type="number" id="field-budget-threshold" value="1000">
+            </div>
+            <div class="data-io-action-row">
+                <button id="action-export-json">Export Data Config JSON</button>
+                <label for="action-import-json-file" class="custom-file-upload-trigger">Import File Dataset Profile</label>
+                <input type="file" id="action-import-json-file" accept=".json">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Finance Tracker Platform Workspace. Handcoded adhering to structural accessibility specifications.</p>
+    </footer>
+
+    <script type="module" src="scripts/ui.js"></script>
 </body>
 </html>
