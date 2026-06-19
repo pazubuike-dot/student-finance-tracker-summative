@@ -37,20 +37,21 @@
         
         <section id="about" class="view-section">
             <h2>Welcome to Student Finance Tracker!</h2>
-            <p>Manage your money, master your budget cleanly and effectively.</p>
-            <p>Created by: Your Name &mdash; <a href="mailto:your.email@student.com">your.email@student.com</a></p>
+            <p>Manage your money, master your budget.</p>
+            <p style="margin-top: 1rem;">This is a student finance tracker that helps you log expenses, track income, set a monthly budget, and monitor your spending by category.</p>
+            <p style="margin-top: 1.5rem; font-weight: 600;">Created by Precious Azubuike &mdash; <a href="mailto:p.azubuike@alustudent.com">p.azubuike@alustudent.com</a></p>
         </section>
 
         <section id="dashboard" class="view-section hidden">
             <h2>Real-time Overview Analytics</h2>
             <div class="metrics-grid">
-                <div class="card">Total Logged Entries: <span id="metric-total-count">0</span></div>
-                <div class="card">Cumulative Balance: $<span id="metric-total-sum">0.00</span></div>
-                <div class="card">Primary Spending Category: <span id="metric-top-tag">N/A</span></div>
+                <div class="card">Total Logged Entries: <span id="metric-total-count">10</span></div>
+                <div class="card">Cumulative Balance: $<span id="metric-total-sum">590.24</span></div>
+                <div class="card">Primary Spending Category: <span id="metric-top-tag">Fees</span></div>
             </div>
             
             <div id="budgetary-live-alert" class="alert-status-box" aria-live="polite" role="status">
-                Calculating budget status...
+                Remaining budget is healthy. Under ceiling target limit.
             </div>
 
             <div class="subsection-tabs" role="tablist">
@@ -66,6 +67,11 @@
 
             <div id="panelBudgetVsActual" class="subsection-panel hidden">
                 <div class="budget-chart-grid" id="budgetVsActualGrid">
+                    <div class="budget-row"><span>Food</span><div class="progress-bar"><div class="progress-fill" style="width: 25.5%;"></div></div><span>$51.00</span></div>
+                    <div class="budget-row"><span>Books</span><div class="progress-bar"><div class="progress-fill" style="width: 45.0%;"></div></div><span>$89.99</span></div>
+                    <div class="budget-row"><span>Transport</span><div class="progress-bar"><div class="progress-fill" style="width: 22.5%;"></div></div><span>$45.00</span></div>
+                    <div class="budget-row"><span>Entertainment</span><div class="progress-bar"><div class="progress-fill" style="width: 27.1%;"></div></div><span>$54.25</span></div>
+                    <div class="budget-row"><span>Fees</span><div class="progress-bar"><div class="progress-fill" style="width: 100.0%; background-color: var(--color-system-error);"></div></div><span>$350.00</span></div>
                 </div>
             </div>
         </section>
@@ -88,6 +94,16 @@
                         </tr>
                     </thead>
                     <tbody id="ledger-table-rows">
+                        <tr><td>2026-06-12</td><td>House Rent Contribution</td><td>$150.00</td><td>Fees</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-13</td><td>Chemistry Textbook purchase</td><td>$89.99</td><td>Books</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-14</td><td>Monthly Bus Pass renewal</td><td>$45.00</td><td>Transport</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-15</td><td>Pizza dinner with project peers</td><td>$32.50</td><td>Food</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-15</td><td>Movie ticket show ticket</td><td>$15.50</td><td>Entertainment</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-16</td><td>Campus Cafe Latte coffee</td><td>$4.75</td><td>Food</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-17</td><td>Semester Exam Registration Fees</td><td>$200.00</td><td>Fees</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-17</td><td>Concert entry musical festival</td><td>$38.75</td><td>Entertainment</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-18</td><td>Fast Food burger quick meal</td><td>$13.75</td><td>Food</td><td><button class="btn-action">Delete</button></td></tr>
+                        <tr><td>2026-06-19</td><td>Local Train ticket commute</td><td>$0.00</td><td>Transport</td><td><button class="btn-action">Delete</button></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -134,19 +150,3 @@
                 <label for="field-budget-threshold">Threshold Ceiling Limit Target ($):</label>
                 <input type="number" id="field-budget-threshold" value="1000">
             </div>
-            <div class="data-io-action-row">
-                <button id="action-export-json">Export Data Config JSON</button>
-                <label for="action-import-json-file" class="custom-file-upload-trigger">Import File Dataset Profile</label>
-                <input type="file" id="action-import-json-file" accept=".json">
-            </div>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>&copy; 2026 Your Name | Frontend Web Dev Summative — C3</p>
-    </footer>
-
-    <script type="module" src="scripts/ui.js"></script>
-</body>
-</html>
