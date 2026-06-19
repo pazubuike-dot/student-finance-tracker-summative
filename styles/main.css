@@ -47,44 +47,48 @@ body {
     top: 16px;
 }
 
-header {
-    background: var(--color-primary-base);
-    color: var(--color-surface);
+hheader {
+    background-color: #0f172a;
+    color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    margin-bottom: 20px;
+    margin-bottom: 24px;
 }
 
 header h1 {
-    font-size: 1.5rem;
-    margin-bottom: 12px;
+    margin: 0 0 12px 0;
+    font-size: 1.8rem;
 }
 
-nav ul {
+header nav ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
+    gap: 16px;
 }
 
-nav ul li a {
-    color: var(--color-surface);
+header nav ul li a {
+    color: #cbd5e1;
     text-decoration: none;
-    font-size: 0.9rem;
-    opacity: 0.85;
+    font-size: 0.95rem;
 }
 
-nav ul li a:hover {
-    opacity: 1;
-    text-decoration: underline;
+header nav ul li a:hover {
+    color: #ffffff;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
 }
 
 section {
-    background: var(--color-surface);
-    padding: 20px;
+    background: #ffffff;
+    padding: 24px;
     border-radius: 8px;
-    margin-bottom: 20px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 section h2 {
