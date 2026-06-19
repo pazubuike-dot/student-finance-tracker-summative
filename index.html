@@ -12,25 +12,26 @@
     <header>
         <h1>Student Finance Management</h1>
         <nav aria-label="Primary Platform Navigation">
-            <ul>
-                <li><a href="#dashboard-analytics">Analytics</a></li>
-                <li><a href="#ledger-records">Ledger</a></li>
-                <li><a href="#transaction-form-section">Log Entry</a></li>
-                <li><a href="#configuration-panel">Configuration</a></li>
+            <ul id="platform-nav-links">
+                <li><a href="#about-platform-section" class="nav-tab-trigger">About App</a></li>
+                <li><a href="#dashboard-analytics" class="nav-tab-trigger">Analytics</a></li>
+                <li><a href="#ledger-records" class="nav-tab-trigger">Ledger</a></li>
+                <li><a href="#transaction-form-section" class="nav-tab-trigger">Log Entry</a></li>
+                <li><a href="#configuration-panel" class="nav-tab-trigger">Configuration</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="main-layout-content">
-        <section id="about-platform-card" class="card" style="grid-column: 1 / -1; margin-bottom: 20px;">
+        <section id="about-platform-section" class="card app-view-panel" style="padding: 30px; margin-bottom: 20px;">
             <h2>Welcome to Student Finance Tracker!</h2>
             <p>Manage your money, master your budget.</p>
             <p style="font-size: 0.9em; opacity: 0.8; margin-top: 4px;">Created by Precious Azubuike — <a href="mailto:p.azubuike@alustudent.com">p.azubuike@alustudent.com</a></p>
             
-            <hr style="margin: 15px 0; border: 0; border-top: 1px solid rgba(0,0,0,0.1);">
+            <hr style="margin: 20px 0; border: 0; border-top: 1px solid rgba(0,0,0,0.1);">
 
-            <h3 style="margin-bottom: 10px;">✨ Features Built In This Workspace</h3>
-            <ul style="line-height: 1.6; text-align: left; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+            <h3 style="margin-bottom: 12px;">✨ Features Built In This Workspace</h3>
+            <ul style="line-height: 1.7; text-align: left; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
                 <li><strong>Dashboard Overview:</strong> Displays total records, total spending, top category metrics, and context-aware budget cap notifications.</li>
                 <li><strong>Top-Level Financial Overview Cards:</strong> Real-time components indicating Total Balance, Monthly Income, Total Expenses, and computed Net Savings.</li>
                 <li><strong>Dynamic Record Mutation:</strong> Direct inline entry additions and removal handlers managed safely inside a modular JavaScript application state.</li>
@@ -40,7 +41,7 @@
             </ul>
         </section>
 
-        <section id="dashboard-analytics" aria-labelledby="analytics-heading">
+        <section id="dashboard-analytics" class="app-view-panel" aria-labelledby="analytics-heading">
             <h2 id="analytics-heading">Real-time Overview Analytics</h2>
             <div class="metrics-grid">
                 <div class="card">Total Logged Entries: <span id="metric-total-count">0</span></div>
@@ -50,7 +51,7 @@
             <div id="budgetary-live-alert" class="alert-status-box" aria-live="polite" role="status"></div>
         </section>
 
-        <section id="ledger-records" aria-labelledby="ledger-heading">
+        <section id="ledger-records" class="app-view-panel" aria-labelledby="ledger-heading">
             <h2 id="ledger-heading">Financial Ledger Records</h2>
             <div class="search-panel-wrapper">
                 <label for="search-regex-field">Live Filter Regex Query Pattern:</label>
@@ -74,7 +75,7 @@
             </div>
         </section>
 
-        <section id="transaction-form-section" aria-labelledby="form-heading">
+        <section id="transaction-form-section" class="app-view-panel" aria-labelledby="form-heading">
             <h2 id="form-heading">Record New Transaction Entry</h2>
             <form id="financial-input-form" novalidate>
                 <div class="form-control-block">
@@ -109,7 +110,7 @@
             </form>
         </section>
 
-        <section id="configuration-panel" aria-labelledby="config-heading">
+        <section id="configuration-panel" class="app-view-panel" aria-labelledby="config-heading">
             <h2 id="config-heading">Platform System Configuration Settings</h2>
             <div class="settings-control-wrapper">
                 <label for="field-budget-threshold">Threshold Ceiling Limit Target ($):</label>
