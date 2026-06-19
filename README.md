@@ -6,7 +6,7 @@ A responsive, accessible, and modular web application for tracking personal fina
 
  Project Structure
 
-```text
+text
 ├── index.html
 ├── README.md
 ├── assets/
@@ -60,7 +60,7 @@ Persistent Visual Context Storage: Native state synchronization retaining custom
 Native Scraper Core Engine: Fully integrated decoupled DOMParser runtime module that evaluates and sanitizes raw HTML markup documents to catalog heading structures, hyperlink vectors, graphic assets, structural tables, and input interaction tags.
 
 
-Accessibility Notes
+# Accessibility Notes
 Semantic HTML5 Landmarks: Built with clean accessibility layouts utilizing structural regions explicitly mapped via <header>, <nav>, <main>, <section>, and <footer>.
 Proper Heading Hierarchy: Strict execution path following a consistent downward logical framework (<h1> $\rightarrow$ <h2> $\rightarrow$ <h3>).
 Descriptive ARIA Node Labeling: Specialized functional micro-actions feature explicit context tags, such as aria-label="Delete entry row matching description text".
@@ -69,12 +69,12 @@ Keyboard Navigation Skip Links: Includes an isolated, high-level keyboard focus 
 High-Contrast Design Patterns: Complies with WCAG color compliance checks under clean, modern visual palettes across alternating responsive states.
 Visible Focus Indicators: Dedicated outline styling indicators (*:focus-visible) are consistently preserved to support clear keyboard interaction paths.
 
-How to Run Tests
+# How to Run Tests
  Deployed Applications Quick Links
 [Launch Main Application Workspace](https://pazubuike-dot.github.io/student-finance-tracker-summative/)
 [Execute Automated Regex Engine Test Suite](https://pazubuike-dot.github.io/student-finance-tracker-summative/tests.html)
 
-Manual Testing Execution Sequence
+# Manual Testing Execution Sequence
 
  1. Income Tracking
 Access the main tracking console and inputs.
@@ -104,7 +104,8 @@ Confirm layout components dynamically update target percentages correctly.
 
  7. Scraper System Operations
  Input targeted evaluation pages into your parsing layout text panel console.
- Trigger parsing sequences and observe data models outline extracted tags accurately.
+ Trigger parsing sequences and observe data models outline e<img width="1584" height="396" alt="Precious Amarachi Azubuike linkedin " src="https://github.com/user-attachments/assets/be7178cd-11d5-458c-9aee-fbaa51dedfc6" />
+xtracted tags accurately.
 
 seed.json Requirements
 
@@ -114,7 +115,8 @@ Located securely within the assets folder path (`assets/seed.json`), providing t
 * **Boundary Conditions (Numerical Fields):** Evaluates financial calculation limits ranging between floating points `$0.01` up to `$99999.99`.
 * **Complex String Scenarios:** Features special character configurations and complex text strings, including patterns like `"Lunch @ Café"`, `"Rent (Jan)"`, and `"Gift: "`.
 
-
+# DEMO VIDEO
+[https://youtu.be/hnFklSN4AIA]([url](https://youtu.be/hnFklSN4AIA))
 
 References & Code Inspirations
 
