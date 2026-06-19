@@ -47,51 +47,45 @@ body {
     top: 16px;
 }
 
-hheader {
-    background-color: #0f172a;
-    color: #ffffff;
+header {
+    background: var(--color-primary-base);
+    color: var(--color-surface);
     padding: 20px;
     border-radius: 8px;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
 }
 
 header h1 {
-    margin: 0 0 12px 0;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
 }
 
-header nav ul {
+nav ul {
     list-style: none;
-    padding: 0;
-    margin: 0;
     display: flex;
-    gap: 16px;
+    flex-wrap: wrap;
+    gap: 12px;
 }
 
-header nav ul li a {
-    color: #cbd5e1;
+nav ul li a {
+    color: var(--color-surface);
     text-decoration: none;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
+    opacity: 0.85;
 }
 
-header nav ul li a:hover {
-    color: #ffffff;
-}
-
-main {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
+nav ul li a:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
 
 section {
-    background: #ffffff;
-    padding: 24px;
+    background: var(--color-surface);
+    padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
-}
-
-section h2 {
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+} section h2 {
     font-size: 1.2rem;
     color: var(--color-primary-base);
     margin-bottom: 16px;
