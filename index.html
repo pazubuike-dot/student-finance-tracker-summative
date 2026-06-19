@@ -22,6 +22,24 @@
     </header>
 
     <main id="main-layout-content">
+        <section id="about-platform-card" class="card" style="grid-column: 1 / -1; margin-bottom: 20px;">
+            <h2>Welcome to Student Finance Tracker!</h2>
+            <p>Manage your money, master your budget.</p>
+            <p style="font-size: 0.9em; opacity: 0.8; margin-top: 4px;">Created by Precious Azubuike — <a href="mailto:p.azubuike@alustudent.com">p.azubuike@alustudent.com</a></p>
+            
+            <hr style="margin: 15px 0; border: 0; border-top: 1px solid rgba(0,0,0,0.1);">
+
+            <h3 style="margin-bottom: 10px;">✨ Features Built In This Workspace</h3>
+            <ul style="line-height: 1.6; text-align: left; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+                <li><strong>Dashboard Overview:</strong> Displays total records, total spending, top category metrics, and context-aware budget cap notifications.</li>
+                <li><strong>Top-Level Financial Overview Cards:</strong> Real-time components indicating Total Balance, Monthly Income, Total Expenses, and computed Net Savings.</li>
+                <li><strong>Dynamic Record Mutation:</strong> Direct inline entry additions and removal handlers managed safely inside a modular JavaScript application state.</li>
+                <li><strong>Global Currency Switching Engine:</strong> Dynamic value conversions (including USD, RWF, EUR, GHS) adjusting data layouts on-the-fly using fixed exchange constants.</li>
+                <li><strong>Strict JSON Data Interchange:</strong> Secure system backup downloading via data-URI compilation alongside structured external configuration dataset importing.</li>
+                <li><strong>Persistent Visual Context Storage:</strong> Native state synchronization retaining customized configuration flags across full system reloading cycles using <code>localStorage</code>.</li>
+            </ul>
+        </section>
+
         <section id="dashboard-analytics" aria-labelledby="analytics-heading">
             <h2 id="analytics-heading">Real-time Overview Analytics</h2>
             <div class="metrics-grid">
@@ -102,24 +120,6 @@
                 <label for="action-import-json-file" class="custom-file-upload-trigger">Import File Dataset Profile</label>
                 <input type="file" id="action-import-json-file" accept=".json">
             </div>
-        </section>
-
-        <section class="card" style="margin-top: 40px; padding: 25px; border-top: 4px solid var(--color-primary-base, #0f172a);">
-            <h2>Welcome to Student Finance Tracker!</h2>
-            <p>Manage your money, master your budget.</p>
-            <p style="font-size: 0.9em; color: #666;">Created by Precious Azubuike — <a href="mailto:p.azubuike@alustudent.com">p.azubuike@alustudent.com</a></p>
-            
-            <hr style="margin: 20px 0; border: 0; border-top: 1px solid #eee;">
-
-            <h3 style="margin-bottom: 15px;">✨ Features Built In This Workspace</h3>
-            <ul style="line-height: 1.8; text-align: left; padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
-                <li><strong>Dashboard Overview:</strong> Displays total records, total spending, top category metrics, and context-aware budget cap notifications.</li>
-                <li><strong>Top-Level Financial Overview Cards:</strong> Real-time components indicating Total Balance, Monthly Income, Total Expenses, and computed Net Savings.</li>
-                <li><strong>Dynamic Record Mutation:</strong> Direct inline entry additions and removal handlers managed safely inside a modular JavaScript application state.</li>
-                <li><strong>Global Currency Switching Engine:</strong> Dynamic value conversions (including USD, RWF, EUR, GHS) adjusting data layouts on-the-fly using fixed exchange constants.</li>
-                <li><strong>Strict JSON Data Interchange:</strong> Secure system backup downloading via data-URI compilation alongside structured external configuration dataset importing.</li>
-                <li><strong>Persistent Visual Context Storage:</strong> Native state synchronization retaining customized configuration flags (such as dark mode preferences and ledger records) across full system reloading cycles using <code>localStorage</code>.</li>
-            </ul>
         </section>
     </main>
 
