@@ -116,14 +116,12 @@ Located securely within the assets folder path (`assets/seed.json`), providing t
 * **Complex String Scenarios:** Features special character configurations and complex text strings, including patterns like `"Lunch @ Café"`, `"Rent (Jan)"`, and `"Gift: "`.
 
 # DEMO VIDEO
-[https://youtu.be/hnFklSN4AIA]([url](https://youtu.be/hnFklSN4AIA))
-
-References & Code Inspirations
-
- [MDN Web Docs](https://developer.mozilla.org/) — Structural JavaScript DOM patterns (`DOMParser`, `FileReader`, `Blob`, asynchronous modules), execution contexts, and core accessibility design guidelines.
- [CSS-Tricks](https://css-tricks.com/) — Multi-breakpoint fluid layouts, responsive media queries, and adaptive client variables.
- [WCAG 2.1 Technical Specifications](https://www.w3.org/WAI/standards-guidelines/wcag/) — Accessible contrast validation thresholds, screen-reader focus tracking guidelines, and dynamic application notifications.
+👉 [Watch the Full Project Walkthrough Demo Video Here](https://youtu.be/hnFklSN4AIA)
 
 
 
-© 2026 Pazubuike | Frontend Web Dev Summative — C3 
+## References & Code Inspirations
+
+* [MDN Web Docs](https://developer.mozilla.org/) — Structural JavaScript DOM patterns (`DOMParser`, `FileReader`, `Blob`, asynchronous modules), execution contexts, and core accessibility design guidelines.
+* [CSS-Tricks](https://css-tricks.com/) — Multi-breakpoint fluid layouts, responsive media queries, and adaptive client variables.
+* [WCAG 2.1 Technical Specifications](https://www.w3.org/WAI/standards-guidelines/wcag/) — Accessible contrast validation thresholds, screen-reader focus tracking guidelines, and dynamic application notifications.
